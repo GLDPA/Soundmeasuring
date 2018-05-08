@@ -9,10 +9,11 @@ app.set('view engine', 'ejs');
 app.set('views', 'app/views');
 
 app.locals.siteTitle = 'Noise level supervisor';
-app.locals.allSpeakers = dataFile.speakers;
+app.locals.productName = 'Ultimate 2k';
 
 app.use(express.static('app/public'));
 app.use(require('./routes/index'));
+app.use(require('./routes/get'));
 
 
 var server = app.listen(app.get('port'), function() {
