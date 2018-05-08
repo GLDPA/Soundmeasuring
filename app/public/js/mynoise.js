@@ -12,7 +12,7 @@ $(function() {
         function showMeasurements(data) {
      output += '<h1>Previous Measurements</h1>';
      $.each(data,function(key, item) {
-        output += '<h1> ' + item.ID +'  </h1>';
+        output += '<h1> '+ 'ID ' + item.ID + '</h1>';
           output += '<h3> ' + item.DECIBEL + 'dB' + '</h3>';
 
     });
