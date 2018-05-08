@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/GetAllMeasurments/', function(req, res) {
+router.get('/get', function(req, res) {
     
-    var data = req.app.get('appData');
+    
 
-    res.render('index', {
+    res.render('get', {
       
       pageTitle: 'Home',
       pageID: 'home'
