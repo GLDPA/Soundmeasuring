@@ -7,8 +7,8 @@ app.set('port', process.env.PORT || 3000 );
 app.set('view engine', 'ejs');
 app.set('views', 'app/views');
 
-app.locals.siteTitle = 'Noise level supervisor';
-app.locals.productName = 'Sound Measurment';
+app.locals.siteTitle = 'Temprature measurements';
+app.locals.productName = 'Tempratures';
 
 app.use(express.static('app/public'));
 app.use(require('./routes/index'));

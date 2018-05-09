@@ -12,8 +12,8 @@ $(function() {
         function showMeasurements(data) {
      output += '<h1>Previous Measurements</h1>';
      $.each(data,function(key, item) {
-        output += '<h1> '+ 'ID ' + item.ID + '</h1>';
-          output += '<h3> ' + item.DECIBEL + 'dB' + '</h3>';
+        output += '<h1> '+ 'Dato ' + item.Date + '</h1>';
+          output += '<h3> ' + item.Temprature + 'C' + '</h3>';
 
     });
     $('.Measurements').html(output);
