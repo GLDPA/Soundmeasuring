@@ -7,8 +7,8 @@ router.get('/get', function(req, res) {
 
     res.render('get', {
       
-      pageTitle: 'Home',
-      pageID: 'home'
+      pageTitle: 'Get',
+      pageID: 'get'
     });
   
   });
