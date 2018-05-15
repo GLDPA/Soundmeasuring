@@ -5,20 +5,20 @@ $(function() {
     $.ajax({
         type : 'GET',
         dataType: 'jsonp',
-        url: 'http://localhost:55168/Service1.svc/get/',
+        url: 'http://localhost:55168/Service1.svc/getallmeasurments/',
         success: showMeasurements
         });
 
         function showMeasurements(data) {
      output += '<h1>Previous Measurements</h1>';
      $.each(data,function(key, item) {
-        output += <ul data-role="listview"  class=""  id="list">
-        output += <li id="A"><a href="#page2" data-ajax="false">A</a></li>
-        output += <li id="B"><a href="#page2" data-ajax="false">B</a></li>
-        output += <li id="C"><a href="#page2" data-ajax="false">C</a></li>
-        output += <li id="D"><a href="#page2" data-ajax="false">D</a></li>
-     </ul>
-        output += '<h2'+ 'Id '+ item.Id +'</h2>'
+        output += '<ul data-role="listview"  class=""  id="list">';
+        output += '<li id="A"><a href="#page2" data-ajax="false">A</a></li>';
+        output += '<li id="B"><a href="#page2" data-ajax="false">B</a></li>';
+        output += '<li id="C"><a href="#page2" data-ajax="false">C</a></li>';
+        output += '<li id="D"><a href="#page2" data-ajax="false">D</a></li>';
+        output += '</ul>';
+        output += '<h2'+ 'Id '+ item.Id +'</h2>';
         output += '<h1> '+ 'Dato ' + item.Date + '</h1>';
         output += '<h3> ' + item.Temperature + 'C' + '</h3>';
 
