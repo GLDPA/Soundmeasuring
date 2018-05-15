@@ -1,12 +1,8 @@
 var express = require('express');
 var reload = require('reload');
 var app = express();
-<<<<<<< HEAD
 var dataFile = require('./data/data.json');
 var path = require('path')
-=======
-
->>>>>>> master
 
 app.set('port', process.env.PORT || 3000 );
 app.set('view engine', 'ejs');
