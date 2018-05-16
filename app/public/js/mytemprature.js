@@ -14,7 +14,6 @@ $(function() {
             output += '<th>ID</th>';
             output += '<th>DATE</th>';
             output += '<th>TEMPERATURE</th>';
-            output += '<th>DELETE</th>';
             output += '</tr>';
      $.each(data,function(key, item) {
     
@@ -27,12 +26,6 @@ $(function() {
         else{
              output += '<th>' + item.Temperature + '</th>';
         }
-        output += '<th>' + <p>
-        <button type="button" class="btn btn-info">
-          <span class="glyphicon glyphicon-delete"></span> delete
-        </button>
-        </p>+ '</th>';
-        
         output += '</tr>';
         $( '.Measurments').on('click', function(e){
             if(e.target.className == 'glyphicon glyphicon-delete '){
