@@ -10,27 +10,49 @@ $(function() {
         });
 
         function showMeasurements(data) {
-     output += '<h1>Previous Measurements</h1>';
+            output += '<tr>';
+            output += '<th>ID</th>';
+            output += '<th>DATE</th>';
+            output += '<th>TEMPERATURE</th>';
+            output += '<th>DELETE</th>';
+            output += '</tr>';
      $.each(data,function(key, item) {
-        <ul data-role="listview" class="" id="list">
+    
+        output += '<tr>';
+        output += '<th>' + item.Id + '</th>';
+        output += '<th>' + item.Date + '</th>';
+        if (item.Temperature > 26) {
+            output += '<th>' + item.Temperature + '!' + '</th>';
+        }
+        else{
+             output += '<th>' + item.Temperature + '</th>';
+        }
+        output += '<th>' + <p>
+        <button type="button" class="btn btn-info">
+          <span class="glyphicon glyphicon-delete"></span> delete
+        </button>
+        </p>+ '</th>';
+        
+        output += '</tr>';
+        $( '.Measurments').on('click', function(e){
+            if(e.target.className == 'glyphicon glyphicon-delete '){
+                var deleteurl = 'http://localhost:55168/Service1.svc/delete' + e.target.id
+        
+                $.ajax({
+                    type : 'delete',
+                    url : deleteurl,
+                    success : deletemeasurment,
+                    dataType : 'json',
+                    crossDomain : true
+                });
+            }
+        function deletemeasurment(data){
+             $.getJSON('http://localhost:55168/Service1.svc/getallmeasurments/', showMeasurements);
+             
+        }
+        })
+     });
 
-        <li id="A"><a href="#page2" data-ajax="false">A</a></li>
-        <li id="B"><a href="#page2" data-ajax="false">B</a></li>
-        <li id="C"><a href="#page2" data-ajax="false">C</a></li>
-        <li id="D"><a href="#page2" data-ajax="false">D</a></li>
-        </ul>
-         output += '<h2 onClick = MyDeleteTemperature>'+ 'Id '+ item.Id +'</h2>'
-         output += '<h1> '+ 'Dato ' + item.Date + '</h1>';
-
-         if (item.Temperature > 25) {
-            output += '<h3> ' + item.Temperature + 'C' + '!' + '</h3>';
-         }
-
-         output += '<h3> ' + item.Temperature + 'C' + '</h3>';
-
-         
-        window.location.reload(10);
-    },5000);
-    $('.Measurements').html(output);
+    $('.temperatures').html(output);
 }
 });
