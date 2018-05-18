@@ -10,7 +10,7 @@ $(function () {
     });
 
     $(document).on("click", '.feedback-delete', function (e) {
-        $('#wrapper').append($('<p>fwggw</p>'));
+        //$('#wrapper').append($('<p>fwggw</p>'));
         // if (e.target.className == 'glyphicon glyphicon-remove') {
         var deleteurl = 'http://localhost:55168/Service1.svc/delete/' + e.target.id
 
@@ -22,10 +22,9 @@ $(function () {
             crossDomain: true
         });
         // }
-        function deletemeasurment(data) {
-            $.getJSON('http://localhost:55168/Service1.svc/getallmeasurments/', showMeasurements);
-
-        }
+        //function deletemeasurment(data) {
+          //  $.getJSON('http://localhost:55168/Service1.svc/getallmeasurments/', showMeasurements)
+        //}
     });
 
     function showMeasurements(data) {
