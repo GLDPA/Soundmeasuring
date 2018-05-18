@@ -13,10 +13,10 @@ $(function () {
         output += '<h2> Average </h2>';
         output += '<p>' + data + '</p>';
 
-
+        $('.average').html(output);
     }
 
-    $('.average').html(output);
+   
 
 
 });
