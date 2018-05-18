@@ -14,9 +14,9 @@ $(function() {
      $.each(data,function(key, item) {
          output += '<h2>'+ 'Id '+ item.Id +'</h2>'
         output += '<h1> '+ 'Dato ' + item.Date + '</h1>';
-          output += '<h3> ' + item.Temperature + 'C' + '</h3>';
-        window.location.reload(10);
-    },5000);
+          output += '<h3> ' + item.Temperature + ' C' + '</h3>';
+        
+    });
     $('.Measurements').html(output);
 }
 });
