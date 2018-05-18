@@ -22,9 +22,9 @@ $(function () {
             crossDomain: true
         });
         // }
-        //function deletemeasurment(data) {
+        function deletemeasurment(data) {
           //  $.getJSON('http://localhost:55168/Service1.svc/getallmeasurments/', showMeasurements)
-        //}
+        }
     });
 
     function showMeasurements(data) {
