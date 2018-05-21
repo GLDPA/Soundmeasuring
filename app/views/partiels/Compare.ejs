@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head><% include partials/template/head.ejs %>
+  <style>
+      table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+      }
+      
+      td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+          background-color: #dddddd;
+      }
+    </style>
+    </head>
+  <body id="<%= pageID %>">
+    <div id="wrapper">
+      <% include partials/template/navbar.ejs %>
+      <table>
+        <script src="js/mytemprature.js"></script>
+        <div class="temperatures">
+        </div>
+      </table>
+    </div>
+  </body>
+</html>
