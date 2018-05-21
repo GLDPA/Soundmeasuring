@@ -10,21 +10,21 @@ $(function () {
     });
 
     $(document).on("click", '.feedback-delete', function (e) {
-        //$('#wrapper').append($('<p>fwggw</p>'));
-        // if (e.target.className == 'glyphicon glyphicon-remove') {
         var deleteurl = 'http://localhost:55168/Service1.svc/delete/' + e.target.id
 
         $.ajax({
             type: 'delete',
             url: deleteurl,
-            success: deletemeasurment,
+            success: updatemeasurment,
             dataType: 'json',
             crossDomain: true
         });
         // }
-        function deletemeasurment(data) {
-          //  $.getJSON('http://localhost:55168/Service1.svc/getallmeasurments/', showMeasurements)
-        }
+        function updatemeasurment(data) {
+            window.location.reload();
+
+
+        };
     });
 
     function showMeasurements(data) {
@@ -55,5 +55,6 @@ $(function () {
 
         $('.temperatures').html(output);
     }
+
 
 });

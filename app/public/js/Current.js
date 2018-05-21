@@ -14,7 +14,7 @@ $(function(){
 
     function showTemp(data){
 
-    output += '<h1>' + data.Temperature + '</h1>';
+    output += '<h1>'+ "current temperature : " + data.Temperature + '</h1>';
 
     $('.chosenMeasurement').html(output);
     }
