@@ -40,4 +40,7 @@ function showMeasurements(data) {
     $('.temperatures').html(output);
 }
 
+var output = '';
+
+
 });
