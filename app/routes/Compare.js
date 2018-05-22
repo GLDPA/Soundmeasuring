@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/average', function(req, res){
+router.get('/compare', function(req, res){
 
 
-    res.render('average', {
+    res.render('compare', {
       
-        pageTitle: 'average',
-        pageID: 'average'
+        pageTitle: 'compare',
+        pageID: 'compare'
       });
     
     });

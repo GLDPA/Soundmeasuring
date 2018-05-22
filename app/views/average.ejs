@@ -4,8 +4,11 @@
   <body id="<%= pageID %>">
     <div id="wrapper">
       <% include partials/template/navbar.ejs %>
-      <% include partials/content/mytemprature.ejs %>
-      halløj
+      <div id="average">
+        <p>
+          <% include partials/content/myaverage.ejs%>
+        </p>
+      </div>
     </div>
   </body>
 </html>
