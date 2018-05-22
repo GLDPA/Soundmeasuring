@@ -3,7 +3,6 @@ var router = express.Router();
 
 router.get('/compare', function(req, res){
 
-    console.log("korrekt ")
 
     res.render('compare', {
       
