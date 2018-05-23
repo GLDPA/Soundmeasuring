@@ -19,5 +19,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/GLDPA/Soundmeasuring"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
   }
 }
