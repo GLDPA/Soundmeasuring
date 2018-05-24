@@ -16,7 +16,7 @@ $(function () {
             type: 'delete',
             url: deleteurl,
             success: updatemeasurment,
-            dataType: 'jsonp',
+            dataType: 'json',
             crossDomain: true
         });
         
