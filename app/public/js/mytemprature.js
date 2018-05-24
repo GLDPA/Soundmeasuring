@@ -10,13 +10,17 @@ $(function () {
     });
 
     $(document).on("click", '.feedback-delete', function (e) {
+
         var deleteurl = 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/delete/' + e.target.id
+
+        var deleteurl = 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/delete/' + e.target.id;
+
 
         $.ajax({
             type: 'delete',
             url: deleteurl,
             success: updatemeasurment,
-            dataType: 'jsonp',
+            dataType: 'json',
             crossDomain: true
         });
         
@@ -42,7 +46,7 @@ $(function () {
 
             if (item.Temperature > 30) {
                 output += '<th>' + item.Temperature + "  !" + '</th>';
-                alert("the room is on fire, we don't need no water let the mother fucker burn");
+                alert("ADVERSEL : Den nyeste temperatur overstiger 30 grader");
 
             }
             else {
