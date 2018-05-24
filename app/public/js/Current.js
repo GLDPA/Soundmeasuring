@@ -7,7 +7,7 @@ $(function(){
     $.ajax({
         type : 'GET',
         datatype : 'jsonp',
-        url : 'http://localhost:55168/Service1.svc/current/',
+        url : 'https://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/current/',
         success : showTemp
         
     });
