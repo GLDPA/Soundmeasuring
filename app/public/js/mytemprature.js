@@ -52,7 +52,7 @@ $(function () {
             else {
                 output += '<th>' + item.Temperature + '</th>';
             }
-            output += `<th> <div class="media-left"><button id='${item.Id}' class="feedback-delete btn btn-xs btn-danger"><span id="' + item.Id + '" class="glyphicon glyphicon-remove"></span></button></div> </th>`;
+            output += `<th> <div class="media-left"><button id='${item.Id}' class="delete-delete btn btn-xs btn-danger">Delete<span id="' + item.Id + '" class="glyphicon glyphicon-remove"></span></button></div> </th>`;
             output += '</tr>';
 
 
