@@ -6,7 +6,7 @@ $(function () {
     $.ajax({
         type: 'GET',
         dataType: 'jsonp',
-        url: 'https://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/current/',
+        url: 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/current/',
         success: showCurrentMeasurements
     });
     $.ajax({
