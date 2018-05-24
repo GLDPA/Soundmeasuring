@@ -15,8 +15,15 @@ app.use(require('./routes/index'));
 app.use(require('./routes/get'));
 app.use(require('./routes/Delete'));
 app.use(require('./routes/average'));
+<<<<<<< HEAD
 app.use(require('./routes/GetAvgtoday'));
 app.use(require('./routes/GetAvgweek'));
+=======
+app.use(require('./routes/compare'));
+app.use(require('./routes/getAverageToday'));
+app.use(require('./routes/getAverageWeek'));
+
+>>>>>>> master
 
 
 var server = app.listen(app.get('port'), function() {
