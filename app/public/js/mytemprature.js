@@ -10,11 +10,11 @@ $(function () {
     });
 
     $(document).on("click", '.feedback-delete', function (e) {
-<<<<<<< HEAD
+
         var deleteurl = 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/delete/' + e.target.id
-=======
+
         var deleteurl = 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/delete/' + e.target.id;
->>>>>>> Api
+
 
         $.ajax({
             type: 'delete',
