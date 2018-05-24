@@ -5,7 +5,7 @@ $(function () {
     $.ajax({
         type: 'GET',
         dataType: 'jsonp',
-        url: 'https://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/getaverage/',
+        url: 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/getaverage/',
         success: showAverage
     });
 

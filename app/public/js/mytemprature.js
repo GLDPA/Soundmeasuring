@@ -5,12 +5,12 @@ $(function () {
     $.ajax({
         type: 'GET',
         dataType: 'jsonp',
-        url: 'https://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/getallmeasurments/',
+        url: 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/getallmeasurments/',
         success: showMeasurements
     });
 
     $(document).on("click", '.feedback-delete', function (e) {
-        var deleteurl = 'https://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/delete/' + e.target.id
+        var deleteurl = 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/delete/' + e.target.id
 
         $.ajax({
             type: 'delete',
