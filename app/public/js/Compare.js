@@ -1,46 +1,34 @@
 $(function () {
 
-    var output = '';
+    var outputApi = '';
+    var output ='';
 
     $.ajax({
         type: 'GET',
         dataType: 'jsonp',
-        url: 'http://localhost:55168/Service1.svc/getallmeasurments/',
-        success: showMeasurements
+        url: 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/current/',
+        success: showCurrentMeasurements
     });
-
-   
-
-function showMeasurements(data) {
-
-    output += '<tr>';
-    output += '<th>ID</th>';
-    output += '<th>DATE</th>';
-    output += '<th>TEMPERATURE</th>';
-    output += '</tr>';
-    $.each(data, function (key, item) {
-
-        output += '<tr>';
-        output += '<th>' + item.Id + '</th>';
-        output += '<th>' + item.Date + '</th>';
-
-        if (item.Temperature > 26) {
-            output += '<th>' + item.Temperature + "!" + '</th>';
-
-        }
-        else {
-            output += '<th>' + item.Temperature + '</th>';
-        }
-        output += `<th> <div class="media-left"><button id='${item.Id}' class="feedback-delete btn btn-xs btn-danger"><span id="' + item.Id + '" class="glyphicon glyphicon-remove"></span></button></div> </th>`;
-        output += '</tr>';
-
-
+    $.ajax({
+        type: 'GET',
+        dataType: 'jsonp',
+        url: 'http://api.openweathermap.org/data/2.5/weather?q=roskilde,dk&APPID=c0fab036ad71702375b73a97029359c3',
+        success: showApi
     });
+    function showApi(data) {
 
-    $('.temperatures').html(output);
-}
+            outputApi += '<h1>'+'Location: ' + data.name+'  ' + '</h1>';
+            outputApi += '<h1>' +'Temperature: ' + JSON.stringify(Math.round(data.main.temp-273.15)) + '</h1>';
 
-var output = '';
+        $('#apitemp').html(outputApi);
+    }
+
+    function showCurrentMeasurements(data) {
+        output+='<h1>'+'Location: Roskilde'+'</h1>';
+        output += '<h1>'+'Current Temperature: ' + data.Temperature +'</h1>';
+        $('#ourtemp').html(output);
+    }
+
 
 
 });

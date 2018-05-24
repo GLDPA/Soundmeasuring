@@ -5,21 +5,21 @@ $(function () {
     $.ajax({
         type: 'GET',
         dataType: 'jsonp',
-        url: 'http://localhost:55168/Service1.svc/getallmeasurments/',
+        url: 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/getallmeasurments/',
         success: showMeasurements
     });
 
     $(document).on("click", '.feedback-delete', function (e) {
-        var deleteurl = 'http://localhost:55168/Service1.svc/delete/' + e.target.id
+        var deleteurl = 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/delete/' + e.target.id
 
         $.ajax({
             type: 'delete',
             url: deleteurl,
             success: updatemeasurment,
-            dataType: 'json',
+            dataType: 'jsonp',
             crossDomain: true
         });
-        // }
+        
         function updatemeasurment(data) {
             window.location.reload();
 
@@ -40,8 +40,9 @@ $(function () {
             output += '<th>' + item.Id + '</th>';
             output += '<th>' + item.Date + '</th>';
 
-            if (item.Temperature > 26) {
-                output += '<th>' + item.Temperature + "!" + '</th>';
+            if (item.Temperature > 30) {
+                output += '<th>' + item.Temperature + "  !" + '</th>';
+                alert("the room is on fire, we don't need no water let the mother fucker burn");
 
             }
             else {

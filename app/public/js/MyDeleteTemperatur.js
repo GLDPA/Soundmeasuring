@@ -5,7 +5,7 @@ $(function() {
     $.ajax({
         type : 'GET',
         dataType: 'jsonp',
-        url: 'http://localhost:55168/Service1.svc/getallmeasurments/',
+        url: 'http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/getallmeasurments/',
         success: showMeasurements
         });
 
@@ -19,7 +19,7 @@ $(function() {
 }
 $( '.Measurments').on('click', function(e){
     if(e.target.className == 'glyphicon glyphicon-delete '){
-        var deleteurl = 'http://localhost:55168/Service1.svc/delete' + e.target.id
+        var deleteurl = 'https://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/delete' + e.target.id
 
         $.ajax({
             type : 'delete',
@@ -30,7 +30,7 @@ $( '.Measurments').on('click', function(e){
         });
     }
 function deletemeasurment(data){
-     $.getJSON('http://localhost:55168/Service1.svc/getallmeasurments/', showMeasurements);
+     $.getJSON('http://soundmeasuringrest20180522031835.azurewebsites.net/Service1.svc/getallmeasurments/', showMeasurements);
      
 }
 })

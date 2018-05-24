@@ -2,10 +2,16 @@
 <html>
   <head><% include partials/template/head.ejs %>
   <style>
+    #tableleft{
+      float: left;
+    }
       table {
+          
           font-family: arial, sans-serif;
           border-collapse: collapse;
-          width: 100%;
+          width: 40%;
+          padding: 5px;
+          
       }
       
       td, th {
@@ -22,7 +28,7 @@
   <body id="<%= pageID %>">
     <div id="wrapper">
       <% include partials/template/navbar.ejs %>
-      <table>
+      <table id="tableleft">
         <script src="js/mytemprature.js"></script>
         <div class="temperatures">
         </div>
