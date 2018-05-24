@@ -16,6 +16,9 @@ app.use(require('./routes/get'));
 app.use(require('./routes/Delete'));
 app.use(require('./routes/average'));
 app.use(require('./routes/compare'));
+app.use(require('./routes/getAverageToday'));
+app.use(require('./routes/getAverageWeek'));
+
 
 
 var server = app.listen(app.get('port'), function() {
